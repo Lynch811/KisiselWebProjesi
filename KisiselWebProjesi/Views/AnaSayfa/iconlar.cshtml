@@ -1,0 +1,19 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<İconlar>
+
+
+
+
+
+<ul class="sci">
+
+    @foreach (var x in Model)
+    {
+        <li>
+            <a href="@x.link" target="_blank"><i class="@x.icon"  style="font-size: 40px; color: #333; margin-right: 10px " ></i></a>
+        </li>
+    }
+
+
+
+</ul>

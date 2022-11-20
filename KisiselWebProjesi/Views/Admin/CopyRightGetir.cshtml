@@ -1,0 +1,19 @@
+﻿@model KisiselWebProjesi.Models.Siniflar.Copyright
+@{
+    ViewBag.Title = "CopyRightGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Copy Right Güncelle</h2>
+<hr />
+
+@using (Html.BeginForm("CopyRightGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.yazi)
+    @Html.TextBoxFor(x => x.yazi, new { @class = "form-control", })
+    <br />
+    <button class="btn btn-success">Copy Right Güncelle</button>
+}

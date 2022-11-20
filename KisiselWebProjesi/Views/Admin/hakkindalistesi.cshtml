@@ -1,0 +1,31 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<Hakkinda>
+@{
+    ViewBag.Title = "hakkindalistesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mb-4">Hakkında Sayfası</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Güncelle</th>
+        
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.id</td>
+            <td>@x.baslik</td>
+            <td><a href="/Admin/HakkindaGetir/@x.id" class="btn btn-primary">Güncelle</a></td>
+            
+
+
+        </tr>
+    }
+
+</table>
+
+

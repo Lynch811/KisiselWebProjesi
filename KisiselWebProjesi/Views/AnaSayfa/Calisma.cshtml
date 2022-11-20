@@ -1,0 +1,156 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<Calismalarim>
+
+
+
+
+<section class="work" id="work">
+    <div class="title ">
+        @foreach (var x in Model)
+        {
+            <h2>@x.baslik</h2>
+            <p>
+                @x.aciklama
+            </p>
+        }
+
+    </div>
+    <div class="content">
+        <!-- resim 1 -->
+        <div class="workBx">
+            <div class="imgBx">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.resim1">
+                }
+
+            </div>
+            <div class="textBx">
+                @foreach (var x in Model)
+                {
+                    <h3>@x.resimyazi1</h3>
+                }
+
+            </div>
+        </div>
+        <!-- resim 2 -->
+        <div class="workBx">
+            <div class="imgBx">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.resim2">
+                }
+
+            </div>
+            <div class="textBx">
+                @foreach (var x in Model)
+                {
+                    <h3>@x.resimyazi2</h3>
+                }
+
+            </div>
+        </div>
+        <!-- resim 3 -->
+        <div class="workBx">
+            <div class="imgBx">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.resim3">
+                }
+
+            </div>
+            <div class="textBx">
+                @foreach (var x in Model)
+                {
+                    <h3>@x.resimyazi3</h3>
+                }
+
+            </div>
+        </div>
+        <!-- resim 4 -->
+        <div class="workBx">
+            <div class="imgBx">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.resim4">
+                }
+
+            </div>
+            <div class="textBx">
+                @foreach (var x in Model)
+                {
+                    <h3>@x.resimyazi4</h3>
+                }
+
+            </div>
+        </div>
+        <!-- resim 5 -->
+        <div class="workBx">
+            <div class="imgBx">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.resim5">
+                }
+
+            </div>
+            <div class="textBx">
+                @foreach (var x in Model)
+                {
+                    <h3>@x.resimyazi5</h3>
+                }
+
+            </div>
+        </div>
+        <!-- resim 6 -->
+        <div class="workBx">
+            <div class="imgBx">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.resim6">
+                }
+
+            </div>
+            <div class="textBx">
+                @foreach (var x in Model)
+                {
+                    <h3>@x.resimyazi6</h3>
+                }
+
+            </div>
+        </div>
+        <!-- resim 7 -->
+        <div class="workBx">
+            <div class="imgBx">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.resim7">
+                }
+
+            </div>
+            <div class="textBx">
+                @foreach (var x in Model)
+                {
+                    <h3>@x.resimyazi7</h3>
+                }
+
+            </div>
+        </div>
+        <!-- resim 8 -->
+        <div class="workBx">
+            <div class="imgBx">
+                @foreach (var x in Model)
+                {
+                    <img src="@x.resim8">
+                }
+
+            </div>
+            <div class="textBx">
+                @foreach (var x in Model)
+                {
+                    <h3>@x.resimyazi8</h3>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>

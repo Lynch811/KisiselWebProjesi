@@ -1,0 +1,47 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<İletisim>
+
+
+<section class="contact" id="contact">
+    <div class="title white">
+        @foreach (var x in Model)
+        {
+            <h2>@x.baslik</h2>
+            <p>
+                @x.aciklama
+            </p>
+
+        }
+
+    </div>
+    <div class="contactForm">
+        <div class="row">
+            <div class="col50">
+                <input type="text" name="" placeholder="İsim">
+            </div>
+            <div class="col50">
+                <input type="text" name="" placeholder="Soyisim">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col50">
+                <input type="text" name="" placeholder="Mail Adresi">
+            </div>
+            <div class="col50">
+                <input type="text" name="" placeholder="Telefon Numarası">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col100">
+                <textarea placeholder="Mesajınız"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col100">
+                <input type="submit" value="Gönder">
+            </div>
+        </div>
+    </div>
+
+</section>

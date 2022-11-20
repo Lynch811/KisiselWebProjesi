@@ -1,0 +1,108 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<AnaSayfa>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talha ARSLAN</title>
+    <link rel="stylesheet" href="~/web-anaproje/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- ana  kısım  -->
+    <div class="toggle" onclick="toggleMenu();"></div>
+
+    <section class="banner" id="home">
+
+        <div class="imgSidebar">
+            @foreach (var x in Model)
+            {
+                <img src="@x.resim">
+            }
+
+        </div>
+        <div class="contentBx">
+            @foreach (var X in Model)
+            {
+            <h5 class="logoText">@X.anabaslik</h5>
+            }
+            
+        <div>
+            @foreach (var x in Model)
+            {
+                <h4><span>@x.maviyazi</span> @x.maviyaziyani</h4>
+                <h2>@x.isim </h2>
+                <h4>@x.aciklama</h4>
+                <p>
+                    @x.metin
+                </p>
+
+            }
+           
+                <a href="#about" class="btn">Devamı İçin</a>
+          
+
+
+
+        </div>
+
+            @Html.Action("iconlar","AnaSayfa")
+
+            
+        </div>
+    </section>
+    <!-- hakkında  kısmı -->
+             @Html.Action("hakkinda", "AnaSayfa")
+    <!-- servis kısmı -->
+             @Html.Action("Yetenekler","AnaSayfa")
+    <!-- çalışmalarım kısmı -->
+             @Html.Action("Calisma","AnaSayfa")
+    <!-- iletişim kısmı -->
+             @Html.Action("Iletisim","AnaSayfa")
+    <!-- copy right kısmı -->
+             @Html.Action("CopyRight","AnaSayfa")
+
+
+
+    <!-- menulerin olduğu kısım -->
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Ana Sayfa</a></li>
+            <li><a href="#about" onclick="toggleMenu();">Hakkımda</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Yeteneklerim</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Çalışmalarım</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">İletişim</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const sidebar = document.querySelector('.sidebar');
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+
+
+    <!-- ionic ikonları için scripti-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

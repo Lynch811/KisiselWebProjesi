@@ -1,0 +1,10 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<Copyright>
+
+
+<div class="copyright">
+   @foreach (var x in Model)
+   {
+       <p>@x.yazi</p>
+   }
+</div>

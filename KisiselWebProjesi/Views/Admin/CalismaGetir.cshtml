@@ -1,0 +1,90 @@
+﻿@model KisiselWebProjesi.Models.Siniflar.Calismalarim
+@{
+    ViewBag.Title = "CalismaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Çalışmalarım Güncelle</h2>
+<hr />
+@using (Html.BeginForm("CalismaGuncelle", "Admin", FormMethod.Post))
+{
+
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.baslik)
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.aciklama)
+    @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control", })
+    <br />
+    //resim1
+    @Html.LabelFor(x => x.resim1)
+    @Html.TextBoxFor(x => x.resim1, new { @class = "form-control", })
+    <br />
+    //resim yazı 1
+    @Html.LabelFor(x => x.resimyazi1)
+    @Html.TextBoxFor(x => x.resimyazi1, new { @class = "form-control", })
+    <br />
+    //resim2
+    @Html.LabelFor(x => x.resim2)
+    @Html.TextBoxFor(x => x.resim2, new { @class = "form-control", })
+    <br />
+    //resim yazı 2
+    @Html.LabelFor(x => x.resimyazi2)
+    @Html.TextBoxFor(x => x.resimyazi2, new { @class = "form-control", })
+    <br />
+    //resim3
+    @Html.LabelFor(x => x.resim3)
+    @Html.TextBoxFor(x => x.resim3, new { @class = "form-control", })
+    <br />
+    //resim yazı 3
+    @Html.LabelFor(x => x.resimyazi3)
+    @Html.TextBoxFor(x => x.resimyazi3, new { @class = "form-control", })
+    <br />
+    //resim4
+    @Html.LabelFor(x => x.resim4)
+    @Html.TextBoxFor(x => x.resim4, new { @class = "form-control", })
+    <br />
+    //resim yazı 4
+    @Html.LabelFor(x => x.resimyazi4)
+    @Html.TextBoxFor(x => x.resimyazi4, new { @class = "form-control", })
+    <br />
+    //resim5
+    @Html.LabelFor(x => x.resim5)
+    @Html.TextBoxFor(x => x.resim5, new { @class = "form-control", })
+    <br />
+    //resim yazı 5
+    @Html.LabelFor(x => x.resimyazi5)
+    @Html.TextBoxFor(x => x.resimyazi5, new { @class = "form-control", })
+    <br />
+    //resim6
+    @Html.LabelFor(x => x.resim6)
+    @Html.TextBoxFor(x => x.resim6, new { @class = "form-control", })
+    <br />
+    //resim yazı 6
+    @Html.LabelFor(x => x.resimyazi6)
+    @Html.TextBoxFor(x => x.resimyazi6, new { @class = "form-control", })
+    <br />
+    //resim7
+    @Html.LabelFor(x => x.resim7)
+    @Html.TextBoxFor(x => x.resim7, new { @class = "form-control", })
+    <br />
+    //resim yazı 7
+    @Html.LabelFor(x => x.resimyazi7)
+    @Html.TextBoxFor(x => x.resimyazi7, new { @class = "form-control", })
+    <br />
+    //resim8
+    @Html.LabelFor(x => x.resim8)
+    @Html.TextBoxFor(x => x.resim8, new { @class = "form-control", })
+    <br />
+    //resim yazı 8
+    @Html.LabelFor(x => x.resimyazi8)
+    @Html.TextBoxFor(x => x.resimyazi8, new { @class = "form-control", })
+    <br />
+    <button class="btn btn-success">Çalışmaları Güncelle</button>
+
+
+
+
+}

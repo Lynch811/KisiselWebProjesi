@@ -1,0 +1,29 @@
+﻿@model KisiselWebProjesi.Models.Siniflar.Hakkinda
+@{
+    ViewBag.Title = "HakkindaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Hakkında Güncelle</h2>
+<hr />
+
+@using (Html.BeginForm("HakkindaGuncelle", "Admin", FormMethod.Post))
+{
+
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.baslik)
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.aciklama)
+    @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.metin)
+    @Html.TextAreaFor(x => x.metin, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.resim)
+    @Html.TextBoxFor(x => x.resim, new { @class = "form-control", })
+    <br />
+    <button class="btn btn-success">Hakkında Güncelle</button>
+}

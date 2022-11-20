@@ -1,0 +1,83 @@
+﻿@model KisiselWebProjesi.Models.Siniflar.Yeteneklerim
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Yetenekler Güncelle</h2>
+<hr />
+
+@using (Html.BeginForm("YetenekGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.anabaslik)
+    @Html.TextBoxFor(x => x.anabaslik, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.aciklama)
+    @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control", })
+    <br />
+    //1.resim
+    @Html.LabelFor(x => x.icon1)
+    @Html.TextBoxFor(x => x.icon1, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.baslik1)
+    @Html.TextBoxFor(x => x.baslik1, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.metin1)
+    @Html.TextAreaFor(x => x.metin1, new { @class = "form-control", })
+    <br />
+    //2.resim
+    @Html.LabelFor(x => x.icon2)
+    @Html.TextBoxFor(x => x.icon2, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.baslik2)
+    @Html.TextBoxFor(x => x.baslik2, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.metin2)
+    @Html.TextAreaFor(x => x.metin2, new { @class = "form-control", })
+    <br />
+    //3.resim
+    @Html.LabelFor(x => x.icon3)
+    @Html.TextBoxFor(x => x.icon3, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.baslik3)
+    @Html.TextBoxFor(x => x.baslik3, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.metin3)
+    @Html.TextAreaFor(x => x.metin3, new { @class = "form-control", })
+    <br />
+    //4.resim
+    @Html.LabelFor(x => x.icon4)
+    @Html.TextBoxFor(x => x.icon4, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.baslik4)
+    @Html.TextBoxFor(x => x.baslik4, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.metin4)
+    @Html.TextAreaFor(x => x.metin4, new { @class = "form-control", })
+    <br />
+    //5.resim
+    @Html.LabelFor(x => x.icon5)
+    @Html.TextBoxFor(x => x.icon5, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.baslik5)
+    @Html.TextBoxFor(x => x.baslik5, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.metin5)
+    @Html.TextAreaFor(x => x.metin5, new { @class = "form-control", })
+    <br />
+    //6.resim
+    @Html.LabelFor(x => x.icon6)
+    @Html.TextBoxFor(x => x.icon6, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.baslik6)
+    @Html.TextBoxFor(x => x.baslik6, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.metin6)
+    @Html.TextAreaFor(x => x.metin6, new { @class = "form-control", })
+    <br />
+    <button class="btn btn-success">Yenekleri Güncelle</button>
+
+}

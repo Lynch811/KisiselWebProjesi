@@ -1,0 +1,30 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<Copyright>
+@{
+    ViewBag.Title = "CopyRightlistesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mb-4">CopyRight Sayfası</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Güncelle</th>
+
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.id</td>
+            <td>Copy Right</td>
+            <td><a href="/Admin/CopyRightGetir/@x.id" class="btn btn-primary">Güncelle</a></td>
+
+
+
+        </tr>
+    }
+
+</table>
+

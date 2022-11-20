@@ -1,0 +1,36 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<Hakkinda>
+
+
+
+
+<section class="about" id="about">
+    <div class="title white">
+        @foreach (var x in Model)
+        {
+            <h2>@x.baslik</h2>
+            <p>@x.aciklama</p>
+
+        }
+
+    </div>
+    <div class="content">
+        <div class="textBx">
+            @foreach (var x in Model)
+            {
+                <p>
+                    @x.metin
+                </p>
+
+            }
+
+        </div>
+        <div class="imgBx">
+            @foreach (var x in Model)
+            {
+                <img src="@x.resim">
+            }
+
+        </div>
+    </div>
+</section>

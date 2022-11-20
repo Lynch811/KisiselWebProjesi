@@ -1,0 +1,26 @@
+﻿@model KisiselWebProjesi.Models.Siniflar.İletisim
+@{
+    ViewBag.Title = "IletisimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">İletişim Güncelle</h2>
+<hr />
+@using (Html.BeginForm("IletisimGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.baslik)
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control", })
+    <br />
+    @Html.LabelFor(x => x.aciklama)
+    @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control", })
+    <br />
+    
+    <button class="btn btn-success">İletişim Bilgilerini Güncelle</button>
+
+
+
+}
+

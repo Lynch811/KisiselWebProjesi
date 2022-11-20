@@ -1,0 +1,92 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<Yeteneklerim>
+
+
+
+<section class="services" id="services">
+    <div class="title ">
+        @foreach (var x in Model)
+        {
+            <h2>@x.anabaslik</h2>
+            <p>
+                @x.aciklama
+            </p>
+
+        }
+
+    </div>
+    <div class="content">
+        <div class="servicesBx">
+
+            @foreach (var x in Model)
+            {
+                <ion-icon name="@x.icon1"></ion-icon>
+                <h2>@x.baslik1</h2>
+                <p>
+                    @x.metin1
+                </p>
+            }
+
+        </div>
+        <div class="servicesBx">
+            @foreach (var x in Model)
+            {
+                <ion-icon name="@x.icon2"></ion-icon>
+                <h2>@x.baslik2</h2>
+                <p>
+                    @x.metin2
+                </p>
+
+            }
+
+        </div>
+        <div class="servicesBx">
+            @foreach (var x in Model)
+            {
+                <ion-icon name="@x.icon3"></ion-icon>
+                <h2>@x.baslik3</h2>
+                <p>
+                    @x.metin3
+                </p>
+
+            }
+
+        </div>
+        <div class="servicesBx">
+            @foreach (var x in Model)
+            {
+                <ion-icon name="@x.icon4"></ion-icon>
+                <h2>@x.baslik4</h2>
+                <p>
+                    @x.metin4
+                </p>
+
+            }
+
+        </div>
+        <div class="servicesBx">
+            @foreach (var x in Model)
+            {
+                <ion-icon name="@x.icon5"></ion-icon>
+                <h2>@x.baslik5</h2>
+                <p>
+                    @x.metin5
+                </p>
+
+            }
+
+        </div>
+        <div class="servicesBx">
+            @foreach (var x in Model)
+            {
+                <ion-icon name="@x.icon6"></ion-icon>
+                <h2>@x.baslik6</h2>
+                <p>
+                    @x.metin6
+                </p>
+
+            }
+
+        </div>
+    </div>
+</section>
